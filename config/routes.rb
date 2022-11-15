@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
+  resources :tasks
+  get "tasks",             to: "tasks#new", as: :tasks_new
+  delete "tasks/:id",      to: "tasks#destroy", as: :delete_task
 end
